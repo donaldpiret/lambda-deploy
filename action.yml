@@ -1,0 +1,12 @@
+name: 'lambda-deploy'
+description: 'Deploy a lambda function via a zip package'
+author: 'Sephora Asia'
+inputs:
+  package:
+    description: 'Name of the zip package to upload for the function'
+    default: 'package.zip'
+  function-name:
+    description: 'Lambda Function Name'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
